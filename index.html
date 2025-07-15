@@ -122,6 +122,26 @@
       color: #ff3c00;
       text-decoration: underline;
     }
+
+    .about-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.about-photo {
+  width: 160px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.about-text {
+  max-width: 600px;
+}
+    
   </style>
 </head>
 <body>
@@ -135,10 +155,18 @@
   </header>
 <div class="desert-footer"></div>
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>M. Dalton Eloy is a writer originally from Arizona, now based in Washington, DC. His work has been featured in <em>Open Ceilings Magazine</em>, <em>86 Logic</em>, <em>Stanchion Magazine</em>, and others. Connect with him on <a href="https://bsky.app/profile/mdaltoneloy.bsky.social">Bluesky @mdaltoneloy</a>.</p>
-    </section>
+    <section id="about" class="about-section">
+  <img src="portrait.jpg" alt="Portrait of M. Dalton Eloy" class="about-photo" />
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>
+      M. Dalton Eloy is a writer originally from Arizona, now based in Washington, DC.
+      His work has been featured in <em>Open Ceilings Magazine</em>, <em>86 Logic</em>,
+      <em>Stanchion Magazine</em>, and others. Connect with him on
+      <a href="https://bsky.app/profile/mdaltoneloy.bsky.social">Bluesky @mdaltoneloy</a>.
+    </p>
+  </div>
+</section>
   </main>
 
   <img src="tumbleweed.png" alt="tumbleweed" class="tumbleweed">
