@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M. Dalton Eloy</title>
   <style>
     body {
@@ -11,67 +11,12 @@
       font-family: 'Courier New', monospace;
       background-color: #fff;
       color: #111;
-                    
       background-repeat: no-repeat;
       background-position: bottom left, bottom center, bottom right;
       background-size: 120px, 80px, 100px;
-
-      .desert-footer {
-                      background-image: url('desert-footer.png');
-                      background-size: cover;
-                      background-repeat: no-repeat;
-                      background-position: bottom center;
-                      width: 100%;
-                      height: 300px;
-                      position: fixed;
-                      bottom: 0;
-                      left: 0;
-                      z-index: 0;
-                      pointer-events: none;
-        }
-
-      footer.desert-footer {
-                    background-image: url('desert-footer.png');
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    background-position: bottom left;
-                    background-color: #fff;
-                    color: #111;
-                    text-align: bottom center;
-                    /*padding: 5em 1em 10em; */ /* adds space for the art */
-                    border-top: 0px solid #fff;
-                    /*margin-top: 3em;*/
-}
     }
-.tumbleweed {
-  position: fixed;
-  bottom: 0;
-  left: -150px;
-  width: 100px;
-  height: auto;
-  z-index: 5;
-  animation: rollAcross 12s linear infinite;
-  pointer-events: none;
-}
 
-@keyframes rollAcross {
-  0% {
-    transform: translateX(0) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(110vw) rotate(720deg);
-    opacity: 0;
-  }
-}
-
-  header, footer {
+    header, footer {
       background-color: #fff;
       color: #111;
       text-align: center;
@@ -79,8 +24,7 @@
       letter-spacing: 0.1em;
       border-top: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
-}
-
+    }
 
     nav a {
       margin: 0 1em;
@@ -124,40 +68,110 @@
     }
 
     .about-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 2em;
-  margin-top: 2em;
-}
+      display: flex;
+      align-items: flex-start;
+      gap: 2em;
+      margin-top: 2em;
+    }
 
-.about-photo {
-  width: 160px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
+    .about-photo {
+      width: 160px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
 
-.about-text {
-  max-width: 600px;
-}
-  @media (max-width: 600px) {
-  .about-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-  }
+    .about-text {
+      max-width: 600px;
+    }
 
-  .about-photo {
-    width: 100%;
-    max-width: 300px;
-  }
+    .tumbleweed {
+      position: fixed;
+      bottom: 0;
+      left: -150px;
+      width: 100px;
+      height: auto;
+      z-index: 5;
+      animation: rollAcross 12s linear infinite;
+      pointer-events: none;
+    }
 
-  .about-text {
-    max-width: 100%;
-  }
-}
+    @keyframes rollAcross {
+      0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(110vw) rotate(720deg);
+        opacity: 0;
+      }
+    }
 
+    footer.desert-footer {
+      background-image: url('desert-footer.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom left;
+      background-color: #fff;
+      padding: 5em 1em 10em;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Responsive Styling */
+    @media (max-width: 600px) {
+      header, footer {
+        padding: 0.75em;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+      }
+
+      nav a {
+        font-size: 1em;
+        padding: 0.5em;
+        width: 100%;
+        text-align: center;
+      }
+
+      main {
+        padding: 1em;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      .about-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+      }
+
+      .about-photo {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .about-text {
+        max-width: 100%;
+      }
+
+      footer p {
+        font-size: 0.75em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -169,27 +183,26 @@
       <a href="works.html">Works</a>
     </nav>
   </header>
-<div class="desert-footer"></div>
+
   <main>
     <section id="about" class="about-section">
-  <img src="Author Image (square).jpeg" alt="Portrait of M. Dalton Eloy" class="about-photo" />
-  <div class="about-text">
-    <h2>About Me</h2>
-    <p>
-      M. Dalton Eloy is a writer originally from Arizona, now based in Washington, DC.
-      His work has been featured in <em>Open Ceilings Magazine</em>, <em>86 Logic</em>,
-      <em>Stanchion Magazine</em>, and others. Connect with him on
-      <a href="https://bsky.app/profile/mdaltoneloy.bsky.social">Bluesky @mdaltoneloy</a>.
-    </p>
-  </div>
-</section>
+      <img src="Author Image (square).jpeg" alt="Portrait of M. Dalton Eloy" class="about-photo" loading="lazy" />
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          M. Dalton Eloy is a writer originally from Arizona, now based in Washington, DC.
+          His work has been featured in <em>Open Ceilings Magazine</em>, <em>86 Logic</em>,
+          <em>Stanchion Magazine</em>, and others. Connect with him on
+          <a href="https://bsky.app/profile/mdaltoneloy.bsky.social">Bluesky @mdaltoneloy</a>.
+        </p>
+      </div>
+    </section>
   </main>
 
-  <img src="tumbleweed.png" alt="tumbleweed" class="tumbleweed">
+  <img src="tumbleweed.png" alt="tumbleweed" class="tumbleweed" loading="lazy" />
 
-<footer class="desert-footer">
-  <p>&copy; 2025 M. Dalton Eloy</p>
-</footer>
-
+  <footer class="desert-footer">
+    <p>&copy; 2025 M. Dalton Eloy</p>
+  </footer>
 </body>
 </html>
