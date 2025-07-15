@@ -141,41 +141,23 @@
 .about-text {
   max-width: 600px;
 }
-        @media (max-width: 600px) {
-      header, footer {
-        padding: 0.75em;
-      }
+  @media (max-width: 600px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
 
-      nav {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5em;
-      }
+  .about-photo {
+    width: 100%;
+    max-width: 300px;
+  }
 
-      nav a {
-        font-size: 1em;
-        padding: 0.5em;
-        width: 100%;
-        text-align: center;
-      }
+  .about-text {
+    max-width: 100%;
+  }
+}
 
-      main {
-        padding: 1em;
-      }
-
-      h1 {
-        font-size: 1.5em;
-      }
-
-      .published-work {
-        font-size: 0.95em;
-        padding-left: 0.75em;
-      }
-
-      footer p {
-        font-size: 0.75em;
-      }
-    }
   </style>
 </head>
 <body>
