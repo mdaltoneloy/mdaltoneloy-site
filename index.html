@@ -30,6 +30,33 @@
                       pointer-events: none;
         }
     }
+.tumbleweed {
+  position: fixed;
+  bottom: 0;
+  left: -150px;
+  width: 100px;
+  height: auto;
+  z-index: 5;
+  animation: rollAcross 12s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes rollAcross {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110vw) rotate(720deg);
+    opacity: 0;
+  }
+}
 
   header, footer {
       background-color: #f9f9f9;
@@ -100,6 +127,8 @@
       <p>M. Dalton Eloy is a writer originally from Arizona, now based in Washington, DC. His work has been featured in <em>Open Ceilings Magazine</em>, <em>86 Logic</em>, <em>Stanchion Magazine</em>, and others. Connect with him on <a href="https://bsky.app/profile/mdaltoneloy.bsky.social">Bluesky @mdaltoneloy</a>.</p>
     </section>
   </main>
+
+  <img src="tumbleweed.png" alt="tumbleweed" class="tumbleweed">
 
   <footer>
     <p>&copy; 2025 M. Dalton Eloy</p>
