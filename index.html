@@ -29,6 +29,19 @@
                       z-index: 0;
                       pointer-events: none;
         }
+
+      footer.desert-footer {
+                    background-image: url('desert-footer.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: bottom center;
+                    background-color: #f9f9f9;
+                    color: #111;
+                    text-align: center;
+                    padding: 5em 1em 10em; /* adds space for the art */
+                    border-top: 1px solid #ccc;
+                    margin-top: 3em;
+}
     }
 .tumbleweed {
   position: fixed;
@@ -130,8 +143,9 @@
 
   <img src="tumbleweed.png" alt="tumbleweed" class="tumbleweed">
 
-  <footer>
-    <p>&copy; 2025 M. Dalton Eloy</p>
-  </footer>
+<footer class="desert-footer">
+  <p>&copy; 2025 M. Dalton Eloy</p>
+</footer>
+
 </body>
 </html>
