@@ -29,7 +29,20 @@
                       z-index: 0;
                       pointer-events: none;
         }
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
       footer.desert-footer {
                     background-image: url('desert-footer.png');
                     background-repeat: no-repeat;
@@ -40,7 +53,7 @@
                     text-align: bottom center;
                     /*padding: 5em 1em 10em; */ /* adds space for the art */
                     border-top: 0px solid #fff;
-                    margin-top: 3em;
+                    /*margin-top: 3em;*/
 }
     }
 .tumbleweed {
