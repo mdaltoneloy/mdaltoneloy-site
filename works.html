@@ -34,7 +34,7 @@
                     background-image: url('desert-footer.png');
                     background-repeat: no-repeat;
                     background-size: contain;
-                    background-position: bottom;
+                    background-position: bottom left;
                     background-color: #fff;
                     color: #111;
                     text-align: bottom center;
@@ -79,7 +79,6 @@
       letter-spacing: 0.1em;
       border-top: 1px solid #ccc;
       border-bottom: 1px solid #ccc;
-    
 }
 
 
@@ -128,12 +127,13 @@
 <body>
   <header>
     <h1>Published Works</h1>
+	<div class="tagline">Writer. Author. Guy Who Writes.</div>
     <nav>
       <a href="index.html#about">About</a>
       <a href="works.html">Works</a>
     </nav>
   </header>
-
+<div class="desert-footer"></div>
   <main>
     <section id="works">
       <div class="published-work">
@@ -150,9 +150,10 @@
       </div>
     </section>
   </main>
+ <img src="tumbleweed.png" alt="tumbleweed" class="tumbleweed">
+  <footer class="desert-footer">
+  <p>&copy; 2025 M. Dalton Eloy</p>
+</footer>
 
-  <footer>
-    <p>&copy; 2025 M. Dalton Eloy</p>
-  </footer>
 </body>
 </html>
