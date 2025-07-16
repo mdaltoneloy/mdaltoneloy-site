@@ -179,8 +179,10 @@ a {
     max-width: 300px;
   }
 
-  .about-text {
-    max-width: 100%;
+   .about-text {
+    padding: 1.25em;
+    font-size: 1em;
+    text-align: center;
   }
 }
 /* Contact Section Layout */
