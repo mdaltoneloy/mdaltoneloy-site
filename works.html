@@ -77,23 +77,12 @@
       pointer-events: none;
     }
 
-    @keyframes rollAcross {
-      0% {
-        transform: translateX(0) rotate(0deg);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateX(110vw) rotate(720deg);
-        opacity: 0;
-      }
+   @keyframes rollAcross {
+      0% {transform: translateX(0) rotate(0deg); opacity: 0;}
+      10% {opacity: 1;}
+      90% {opacity: 1;}
+      100% {transform: translateX(110vw) rotate(720deg);opacity: 0;}
     }
-
     .background-desert {
 	  position: fixed;
 	  bottom: 0;
