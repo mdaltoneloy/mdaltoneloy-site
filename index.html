@@ -20,6 +20,7 @@
       background-color: #fff;
       color: #111;
       text-align: center;
+      /*padding: 1em;*/
       letter-spacing: 0.1em;
       border-bottom: 1px solid #ccc;
     }
@@ -30,7 +31,7 @@
       gap: 1em;
       padding: 0.5em 0;
     }
-    nav a {
+   nav a {
       margin: 0 1em;
       color: #000000;
       text-decoration: none;
@@ -66,11 +67,97 @@
       color: #888;
     }
 
-    a {
+   a {
       color: #ff3c00;
       text-decoration: underline;
     }
+   .background-desert {
+	  position: fixed;
+	  bottom: 0;
+	  left: 0;
+	  width: 400px; /* adjust as needed */
+  	  height: 400px; /* ✅ Add this */
+	  background-image: url('desert-footer.png');
+	  background-repeat: no-repeat;
+	  background-size: contain;
+	  z-index: 0;
+	  pointer-events: none;
+	}
+	.tumbleweed {
+	  position: fixed;
+	  bottom: 0;
+	  left: -150px;
+	  width: 100px;
+	  height: auto;
+	  z-index: 5;
+	  animation: rollAcross 12s linear infinite;
+	  pointer-events: none;
+	}
+	.footer-fixed {
+	  position: fixed;
+	  bottom: 0;
+	  width: 100%;
+	  text-align: center;
+	  font-size: 0.8em;
+	  color: #888;
+	  background: transparent;
+	  z-index: 10;
+	  pointer-events: none;
+	}
 
+	  
+   @keyframes rollAcross {
+      0% {transform: translateX(0) rotate(0deg); opacity: 0;}
+      10% {opacity: 1;}
+      90% {opacity: 1;}
+      100% {transform: translateX(110vw) rotate(720deg);opacity: 0;}
+    }
+	  
+
+    /* Responsive Styling */
+@media (max-width: 600px) {
+  .background-desert {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+  }
+
+  .tumbleweed {
+    width: 70px;
+  }
+
+  .footer-fixed {
+    font-size: 0.7em;
+    bottom: 5px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  nav a {
+    font-size: 1em;
+    padding: 0.5em;
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .tagline {
+    font-size: 1em;
+    text-align: center;
+    padding: 0 1em;
+  }
     .about-section {
       display: flex;
       align-items: flex-start;
@@ -90,106 +177,11 @@
       max-width: 600px;
     }
 
-    .tumbleweed {
-      position: fixed;
-      bottom: 0;
-      left: -150px;
-      width: 100px;
-      height: auto;
-      z-index: 5;
-      animation: rollAcross 12s linear infinite;
-      pointer-events: none;
-    }
 
-    @keyframes rollAcross {
-      0% {transform: translateX(0) rotate(0deg); opacity: 0;}
-      10% {opacity: 1;}
-      90% {opacity: 1;}
-      100% {transform: translateX(110vw) rotate(720deg);opacity: 0;}
-    }
-
-    footer.desert-footer {
-      background-image: url('desert-footer.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: bottom left;
-      background-color: #fff;
-      padding: 5em 1em 10em;
-      position: relative;
-      z-index: 1;
-      margin-top: 4em;
-    }
-    
-    footer.desert-footer p {
-      font-size: 0.8em;
-      color: #888;
-      margin: 0;
-    }
-    
-    /*@media (max-width: 600px) {
-      footer.desert-footer {
-        background-size: contain;
-        padding: 6em 1em 8em;
-        margin-top: 2em;
-      }
-    }*/
-
-    /* Responsive Styling */
-    @media (max-width: 600px) {
-      header, footer {
-        padding: 0.75em;
-      }
-
-      nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5em;
-      }
-
-      nav a {
-        font-size: 1em;
-        padding: 0.5em;
-        width: 100%;
-        text-align: center;
-      }
-
-      /*main {
-        padding: 1em;
-      }
-
-      h1 {
-        font-size: 1.5em;
-      }*/
-
-      .about-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 1em;
-      }
-
-      .about-photo {
-        width: 100%;
-        max-width: 300px;
-      }
-
-      .about-text {
-        max-width: 100%;
-      }
-      /*new*/
-      footer.desert-footer {
-        background-size: contain;
-        padding: 6em 1em 8em;
-        margin-top: 2em;
-      }
-      
-      footer p {
-        font-size: 0.75em;
-      }
-    }
   </style>
 </head>
 <body>
+  <div class="background-desert"></div>
   <header>
     <h1>M. Dalton Eloy</h1>
     <div class="tagline">Writer. Author. Guy Who Writes.</div>
@@ -218,8 +210,7 @@
 
   <img src="tumbleweed.png" alt="tumbleweed" class="tumbleweed" loading="lazy" />
 
-  <footer class="desert-footer">
-    <p>&copy; 2025 M. Dalton Eloy</p>
-  </footer>
+ <img src="tumbleweed.png" alt="tumbleweed" class="tumbleweed">
+ <div class="footer-fixed">&copy; 2025 M. Dalton Eloy</div>
 </body>
 </html>
