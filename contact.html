@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #fff;
+      color: #111;
+    }
+
+    header, footer {
+      background-color: #fff;
+      color: #111;
+      text-align: center;
+      letter-spacing: 0.1em;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+      margin: 0 1em;
+      color: #ff3c00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff3c00;
+    }
+
+    main {
+      padding: 2em;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #ff3c00;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      margin-top: 2em;
+    }
+
+    label {
+      font-size: 0.95em;
+    }
+
+    input, textarea {
+      font-family: 'Courier New', monospace;
+      padding: 0.75em;
+      border: 1px solid #ccc;
+      background-color: #fefefe;
+      color: #111;
+      font-size: 1em;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background-color: #ff3c00;
+      color: white;
+      border: none;
+      padding: 0.75em 1.5em;
+      font-family: 'Courier New', monospace;
+      font-size: 1em;
+      cursor: pointer;
+      align-self: flex-start;
+    }
+
+    button:hover {
+      background-color: #e13800;
+    }
+
+    .tumbleweed {
+      position: fixed;
+      bottom: 0;
+      left: -150px;
+      width: 100px;
+      height: auto;
+      z-index: 5;
+      animation: rollAcross 12s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes rollAcross {
+      0% {
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(110vw) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    footer.desert-footer {
+      background-image: url('desert-footer.png');
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: bottom center;
+      background-color: #fff;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      min-height: 200px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 1em;
+    }
+
+    footer.desert-footer p {
+      font-size: 0.8em;
+      color: #888;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      header, footer {
+        padding: 0.75em;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+      }
+
+      nav a {
+        font-size: 1em;
+        padding: 0.5em;
+        width: 100%;
+        text-align: center;
+      }
+
+      main {
+        padding: 1em;
+      }
+
+      footer.desert-footer {
+        background-size: cover;
+        min-height: 150px;
+        padding: 1em;
+      }
+
+      footer.desert-footer p {
+        font-size: 0.75em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact</h1>
+    <nav>
+      <a href="index.html#about">About</a>
+      <a href="works.html">Works</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+    <!-- Form Inputs. Each input must have a name="" attribute -->
+    <input type="text" name="name" required>
+    <input type="email" name="email" required>
+    <textarea name="message" required></textarea>
+
+    <!-- Honeypot Spam Protection -->
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+
+    <button type="submit">Submit Form</button>
+
+</form>
+  </main>
+
+  <img src="tumbleweed.png" alt="tumbleweed" class="tumbleweed" loading="lazy" />
+
+  <footer class="desert-footer">
+    <p>&copy; 2025 M. Dalton Eloy</p>
+  </footer>
+</body>
+</html>
