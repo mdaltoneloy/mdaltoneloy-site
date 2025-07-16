@@ -114,6 +114,7 @@ a {
   align-items: flex-start;
   gap: 2em;
   margin-top: 2em;
+  padding-bottom: 4em; /* fallback spacing on wider screens */  
 }
 
 .about-photo {
@@ -133,6 +134,9 @@ a {
   .background-desert {
     width: 300px;
     height: 300px;
+    bottom: 10px; /* pushes it lower */
+  }
+
   }
 
   .tumbleweed {
@@ -167,6 +171,7 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    padding-bottom: 100px; 
   }
 
   .about-photo {
