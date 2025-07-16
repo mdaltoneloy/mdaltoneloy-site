@@ -94,17 +94,19 @@
       }
     }
 
-    footer.desert-footer {
-      background-image: url('desert-footer.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: bottom left;
-      background-color: #fff;
-      padding: 5em 1em 10em;
-      position: relative;
-      z-index: 1;
-      margin-top: 4em;
-    }
+    .background-desert {
+	  position: fixed;
+	  bottom: 0;
+	  left: 0;
+	  width: 200px; /* adjust to your image's real size */
+	  height: auto;
+	  background-image: url('desert-footer.png');
+	  background-repeat: no-repeat;
+	  background-size: contain;
+	  z-index: 0;
+	  pointer-events: none;
+	}
+	  
     @media (max-width: 600px) {
       footer.desert-footer {
         background-size: contain;
@@ -163,6 +165,7 @@
   </style>
 </head>
 <body>
+  <div class="background-desert"></div>
   <header>
     <h1>Published Works</h1>
 	<div class="tagline">Writer. Author. Guy Who Writes.</div>
@@ -173,7 +176,7 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-<div class="desert-footer"></div>
+  
   <main>
     <section id="works">
       <div class="published-work">
