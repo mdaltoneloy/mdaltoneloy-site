@@ -131,8 +131,8 @@ a {
 /* Responsive Styles */
 @media (max-width: 600px) {
   .background-desert {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
   }
 
   .tumbleweed {
