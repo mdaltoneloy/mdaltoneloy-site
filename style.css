@@ -177,6 +177,7 @@ a {
   .about-text {
     max-width: 100%;
   }
+}
 /* Contact Section Layout */
 .contact-section {
   display: flex;
