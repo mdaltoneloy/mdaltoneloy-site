@@ -25,24 +25,42 @@
  <section class="photo-gallery">
       <!-- Add images below -->
       <div class="photo-grid">
-        <img src="photos/photo1.jpg" alt="Potties">
-        <img src="photos/photo2.JPG" alt="Description" />
-        <img src="photos/photo3.JPG" alt="Description" />
-        <img src="photos/photo4.JPG" alt="My Image">
-        <img src="photos/photo5.JPG" alt="My Image">
-        <img src="photos/photo6.JPG" alt="My Image">
-        <img src="photos/photo7.JPG" alt="My Image">
-        <img src="photos/photo8.JPG" alt="My Image">
-        <img src="photos/photo9.JPG" alt="My Image">
-        <img src="photos/photo10.JPG" alt="My Image">
-        <img src="photos/photo11.JPG" alt="My Image">
-        <img src="photos/photo12.JPG" alt="My Image">
-        <img src="photos/photo13.JPG" alt="My Image">
-        <img src="photos/photo14.JPG" alt="My Image">
-        <img src="photos/photo15.JPG" alt="My Image">
+        <img src="photos/photo1.jpg" alt="Potties"onclick="openLightbox(this)">
+        <img src="photos/photo2.JPG" alt="Description" onclick="openLightbox(this)">
+        <img src="photos/photo3.JPG" alt="Description" onclick="openLightbox(this)">
+        <img src="photos/photo4.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo5.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo6.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo7.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo8.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo9.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo10.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo11.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo12.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo13.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo14.JPG" alt="My Image"onclick="openLightbox(this)">
+        <img src="photos/photo15.JPG" alt="My Image"onclick="openLightbox(this)">
       </div>
     </section>
   <img src="tumbleweed.png" class="tumbleweed" />
   <div class="footer-fixed">&copy; 2025 M. Dalton Eloy</div>
+
+  <div id="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full View" />
+</div>
+
+  <script>
+  function openLightbox(img) {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  }
+
+  function closeLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "none";
+  }
+</script>
 </body>
 </html>
