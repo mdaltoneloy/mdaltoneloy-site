@@ -275,8 +275,10 @@ button[type="submit"]:hover {
 }
 
 #lightbox img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 80vw;      /* width limited to 80% of viewport */
+  max-height: 80vh;     /* height limited to 80% of viewport */
+  width: auto;
+  height: auto;
   border-radius: 4px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
   animation: fadeIn 0.3s ease;
