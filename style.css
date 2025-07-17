@@ -191,16 +191,22 @@ a {
 /* Contact Section Layout */
 .contact-section {
   display: flex;
-  justify-content: center;
-  padding: 2em 1em;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+  padding: 4em 1em;
+  min-height: 60vh;        /* optional, for vertical centering */
 }
-
 form {
   display: flex;
   flex-direction: column;
   gap: 1em;
   width: 100%;
   max-width: 500px;
+  align-items: center; /* centers the inner elements */
+}
+
+input, textarea, button {
+  width: 100%; /* keep this for full-width look */
 }
 
 input[type="text"],
