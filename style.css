@@ -72,7 +72,7 @@ a {
   background-image: url('desert-footer.png');
   background-repeat: no-repeat;
   background-size: contain;
-  z-index: 0;
+  z-index: -1;  /* Set behind everything */
   pointer-events: none;
 }
 
