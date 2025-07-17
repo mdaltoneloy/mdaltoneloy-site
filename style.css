@@ -136,7 +136,10 @@ a {
     height: 300px;
     bottom: 10px; /* pushes it lower */
   }
-
+.photo-grid {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
   }
 
   .tumbleweed {
