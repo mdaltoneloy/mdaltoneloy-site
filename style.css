@@ -239,6 +239,8 @@ button[type="submit"]:hover {
   margin: 2em auto;
   padding: 1em;
   max-width: 1200px;
+  position: relative;
+  z-index: 1;
 }
 
 .photo-grid {
